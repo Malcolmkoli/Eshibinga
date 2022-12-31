@@ -19,6 +19,7 @@
 .logo{
 	margin-top: 30px;
 	width: 150px;
+	/* display: flex; */
 }
 
 .header-text{
@@ -89,6 +90,7 @@ p{
 	background: #f67c92;
 	z-index: 2;
 	transition: .5s;
+	border-radius: 12px;
 }
 
 nav ul li{
@@ -99,6 +101,9 @@ nav ul li a{
 	text-decoration: none;
 	color: white;
 }
+nav ul li i{
+	display: none;
+}
 
 #menuBtn{
 	width: 50px;
@@ -107,6 +112,8 @@ nav ul li a{
 	top: 35px;
 	z-index: 2;
 	cursor: pointer;
+	border-radius: 15px;
+	color: blue;
 }
 
 /*-------about------*/
@@ -252,7 +259,7 @@ form input{
 	outline: none;
 	box-shadow: none;
 	box-sizing: border-box;
-	border: 2px solid #fab3c5;
+	border: 2px solid #4b0d1d;
 }
 .btn-box{
 	width: 100%;
@@ -262,6 +269,23 @@ form input{
 .btn-box button{
 	flex-basis: 48%;
 	padding: 15px 0;
+	border-radius: 15px;
+	border: 2px solid #4b0d1d;
+}
+
+#user_name_error, #email_error, #pass_error {
+	margin-top: 2.5px;
+	margin-bottom: 3px;
+	width: 90%;
+    font-size: 13px;
+    color: #c62828;
+    text-align: left;
+    background: rgba(255, 0, 0, 0.1);
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid #EF9A9A;
+    display: none
 }
 
 

@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="style2.css">
 
 	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
-	<script src="https://kit.fontawesome.com/c425e24a8.js"></script>
+	<script src="https://kit.fontawesome.com/b23d732235.js" crossorigin="anonymous"></script>
 
 	</head>
 <body>
@@ -31,12 +31,12 @@
 
 	<nav id="sideNav">
 		<ul>
-			<li><a href="#header">HOME</a></li>
-			<li><a href="#about">Why Eshibinga 'K'?</a></li>
-			<li><a href="#Admissions">Admissions</a></li>
-			<li><a href="#Learning">Learning</a></li>
-			<li><a href="#News">News</a></li>
-			<li><a href="#contact">Contact</a></li>
+			<li><i class="fa-solid fa-house-chimney"></i><a href="#header">HOME</a></li>
+			<li><i class="fa-solid fa-location-dot"></i><a href="#about">ABOUT US</a></li>
+			<li><i class="fa-solid fa-badge-check"><::before></::before></i><a href="#features">FEATURES</a></li>
+			<li><i class="fa-solid fa-graduation-cap"></i><a href="#courses">COURSES</a></li>
+			<li><i class="fa-solid fa-star"></i><a href="#Offer">OFFER</a></li>
+			<li><i class="fa-solid fa-message-middle"></i><a href="#contact">CONTACT</a></li>
 		</ul>
 	</nav>
 	<img src="images/menu.png" id="menuBtn">
@@ -49,9 +49,11 @@
 	</div>
 	<div class="about-right-col">
 		<div class="about-text">
-			<h1>Why Eshibinga 'K'?</h1>
+			<h1>About Us</h1>
 			<span class="square"></span>
-			<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque modi beatae accusamus illo odit incidunt quia fuga at? Officiis nihil repellat ipsum quasi accusamus, architecto alias dolor nostrum at earum sit, maxime eaque blanditiis. Vitae eum dolore et, temporibus adipisci, quis, accusantium doloribus reiciendis deleniti consequuntur inventore dolorum ipsa pariatur esse distinctio molestiae omnis harum magnam ullam ut commodi porro! Libero atque praesentium id vel molestias veritatis repellendus nemo aliquam alias veniam. Atque fugiat excepturi error id alias dolorem et itaque deleniti ipsum! Aliquid numquam nesciunt enim provident. Perspiciatis consectetur repellendus minima voluptas, repudiandae, vel qui sed quasi at minus quis asperiores deserunt voluptatibus illum. Sapiente minima placeat qui aliquid blanditiis, assumenda vitae ipsam sed? Beatae, placeat dolor, cumque tempore ex reiciendis quam nostrum optio ad similique accusantium debitis dicta, adipisci voluptatem magnam autem delectus neque id voluptatum inventore ducimus necessitatibus ut. Beatae voluptatibus eaque, ipsam eum vitae unde alias reprehenderit numquam? Totam eius mollitia quo at nemo ab blanditiis id non, dolorem animi praesentium quasi. Odio minima dignissimos similique esse obcaecati quisquam modi repudiandae velit quos totam illo sapiente nisi soluta mollitia voluptatum laborum et quidem aliquid, ullam aspernatur consectetur! Rem, aut saepe velit ipsum perferendis aspernatur animi facere obcaecati eligendi. Error quis numquam optio quae inventore quaerat quibusdam molestiae debitis velit voluptatum quidem fugiat deserunt quasi aut nostrum adipisci voluptas impedit enim, vero harum. Vero porro similique ratione corporis fuga ducimus inventore at sapiente, velit totam saepe iure expedita ea temporibus nemo veniam numquam dolorum omnis. Porro modi numquam ipsa dolores delectus, neque autem inventore quaerat perspiciatis incidunt repudiandae facere amet sint ea adipisci magni sit vel vitae dignissimos veniam esse earum laborum. Delectus, earum ipsum accusamus nisi labore et ducimus perferendis reiciendis consequuntur autem ex ea quia doloribus nihil a. Sapiente, eveniet illum dolorem officiis aliquid officia?</p><br><br>
+			<p>Eshibinga 'K' Secondary School is located in Kakamega, Kwhisero, Kisa East. The School is under the sponshorship of Church Of God(East Africa). <br>
+			Currently the school is headed by Dr. Bernad Odera and Dr. Benson Opimbi as his sub-ordinate. Eshibinga consists of 40 teaching staff, <br>
+			more than 25 non-teching staff and 900+ students. It is a combined Day and Borading Mixed Secondary School,</p><br><br>
 			<div class="line">
 				<span class="line-1"></span><br>
 				<span class="line-2"></span><br>
@@ -97,6 +99,7 @@
 </section>
 
 <!-- courses -->
+
 <section id="courses">
 	<div class="container course-row">
 		<div class="course-left-col">
@@ -142,17 +145,24 @@
 </section>
 
 <!--   Contact   -->
+
 <section id="contact">
 	<div class="container contact-row">
 		<div class="contact-left-col">
 			<h1>Sign Up to join our <br> Learning Community</h1>
-			<form>
-				<input type="text" placeholder="Enter Name">
-				<input type="email" placeholder="Enter Email">
-				<input type="password" placeholder="Enter Password">
+			<form action="/Official/soon.html" method="post" name="form" onsubmit="return validated(), user_name_Verify()">
+				<input type="text" placeholder="Enter Name" name="user_name">
+				<div id="user_name_error">Please fill up your Name!</div>
+
+				<input type="email" placeholder="Enter Email" name="email">
+				<div id="email_error">Please fill up your Email!</div>
+
+				<input type="password" placeholder="Enter Password" name="password">
+				<div id="pass_error">Please fill up your Password!</div>
+
 				<div class="btn-box">
-					<button class="common-btn">Sign Up</button>
-					<button class="common-btn">Start Free Trial</button>
+					<button type="submit" class="common-btn">Sign Up</button>
+					<button type="submit" class="common-btn">Start Free Trial</button>
 				</div>
 			</form>
 			<div class="line">
@@ -199,7 +209,7 @@
 		<div class="footer-right-col">
 			<div class="footer-info">
 				<div class="copyright-text">
-					<a href="http://www.gmail.com/malcolmkollie"><small>malcolmkollie@protonmail.com</small></a> <br>
+					<a href="mailto:malcolmkollie@protonmail.com" target="_blank"><small>malcolmkollie@protonmail.com</small></a> <br>
 					<small>copyright 2022 Malcolmk</small>
 				</div>
 				<div class="footer-logo">
@@ -255,5 +265,74 @@
 
 
 	</script>
+
+
+	<script>
+		//VAlidation code for inputs
+	
+	var user_name= document.forms['form']['user_name'];
+	var email = document.forms['form']['email'];
+	var password = document.forms['form']['password'];
+	
+	var user_name_error = document.getElementById('user_name_error');
+	var email_error = document.getElementById('email_error');
+	var pass_error = document.getElementById('pass_error');
+	
+	user_name.addEventListener('textInput', user_name_Verify);
+	email.addEventListener('textInput', email_Verify);
+	password.addEventListener('textInput', pass_Verify);
+	
+	function validated(){
+		if (user_name.value.length < 2){
+			user_name.style.border = "1px solid red";
+			user_name_error.style.display = "block";
+			user_name.focus();
+			return false;
+		}
+		if (email.value.length < 6){
+			email.style.border = "1px solid red";
+			email_error.style.display = "block";
+			email.focus();
+			return false;
+		}
+		if (password.value.length < 6){
+			password.style.border = "1px solid red";
+			pass_error.style.display = "inline-flex";
+			password.focus();
+			return false;
+		}
+	}
+
+
+	function  user_name_Verify(){
+		if (user_name.value.length >=3) {
+			user_name.style.border = "1px solid silver";
+			user_name_error.style.display = "none";
+			return true;
+		}
+	}
+	function email_Verify(){	
+		if (email.value.length >=3) {
+			email.style.border = "1px solid silver";
+			email_error.style.display = "none";
+			return true;
+		}
+	}
+	function pass_Verify(){	
+		if (password.value.length >=6) {
+			password.style.border = "1px solid silver";
+			pass_error.style.display = "none";
+			return true;
+		}
+	}
+	function myFunction() {
+		if(last.value.length >=3 && password.value.length >=6){
+			window.location.href="official.html";
+			console.log(window.location.href);
+		}
+		else alert("Invalid Name and Password");
+	}
+	</script>
+	
 </body>
 </html>

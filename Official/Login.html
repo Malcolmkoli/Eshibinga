@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up and Sign In</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/4f0e1c0083.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <a href=""><img src="eshibinga.png" class="logo"></a>
+        <h1>Eshibinga 'K' Secondary School</h1>
+        <h2>Spring to Excellence</h2>
+        
+        <div class="form-box">
+            <h3 id="title">Sing Up</h3>
+            <form action="/Official/soon.html" method="post" name="form" onsubmit="return validated()">
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="First Name" name="first">
+                    </div>
+                    <div id="first_name_error">Please fill up your First Name</div>
+
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Last Name" name="last">
+                    </div>
+                    <div id="last_name_error">Please fill up your Last Name</div>
+
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="password" name="password">
+                    </div>
+                    <div id="pass_error">Please fill up your Password</div>
+                    <p>Lost password <a href="#">Click Here!</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="submit" id="signupBtn">Sign Up</button>
+                    <button type="submit" class="disable" id="signinBtn" onclick="myFunction()">Sign In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+    let signupBtn = document.getElementById("signupBtn");
+    let signinBtn = document.getElementById("signinBtn");
+    let nameField = document.getElementById("nameField");
+    let firstNameError = document.getElementById("first_name_error");
+    let title = document.getElementById("title");
+
+
+
+
+    signinBtn.onclick = function(){
+        nameField.style.maxHeight = "0";
+        // first_name_error.style.maxHeight = "0";
+        title.innerHTML = "Sign In";
+        signupBtn.classList.add("disable");
+        signinBtn.classList.remove("disable");
+    }
+
+    signupBtn.onclick = function(){
+        nameField.style.maxHeight = "60px";
+        firstNameError.style.maxHeight = "";
+        title.innerHTML = "Sign Up";
+        signupBtn.classList.remove("disable");
+        signinBtn.classList.add("disable");
+    }
+</script>
+<script>
+    //VAlidation code for inputs
+
+    var first = document.forms['form']['first'];
+    var last = document.forms['form']['last'];
+    var password = document.forms['form']['password'];
+
+    var first_name_error = document.getElementById('first_name_error');
+    var last_name_error = document.getElementById('last_name_error');
+    var pass_error = document.getElementById('pass_error');
+
+    first.addEventListener('textInput', first_Verify);
+    last.addEventListener('textInput', last_Verify);
+    password.addEventListener('textInput', pass_Verify);
+
+    function validated(){
+        if (first.value.length < 2){
+            first.style.border = "1px solid red";
+            first_name_error.style.display = "block";
+            first.focus();
+            return false;
+        }
+        if (last.value.length < 2){
+            last.style.border = "1px solid red";
+            last_name_error.style.display = "block";
+            last.focus();
+            return false;
+        }
+        if (password.value.length < 6){
+            password.style.border = "1px solid red";
+            pass_error.style.display = "inline-flex";
+            password.focus();
+            return false;
+        }
+    }
+    function  first_Verify(){
+        if (first.value.length >=3) {
+            first.style.border = "1px solid silver";
+            first_name_error.style.display = "none";
+            return true;
+        }
+        if (last.value.length >=3) {
+            last.style.border = "1px solid silver";
+            last_name_error.style.display = "none";
+            return true;
+        }
+        if (password.value.length >=6) {
+            password.style.border = "1px solid silver";
+            pass_error.style.display = "none";
+            return true;
+        }
+    }
+
+    function last_Verify() {
+        if (last.value.length >=3) {
+            last.style.border = "1px solid silver";
+            last_name_error.style.display = "none";
+            return true;
+        } 
+    }
+
+    function pass_Verify() {
+        if (password.value.length >=6) {
+            password.style.border = "1px solid silver";
+            pass_error.style.display = "none";
+            return true;
+        }
+    }
+    function myFunction() {
+        if(last.value.length >=3 && password.value.length >=6){
+            window.location.href="soon.html";
+        }
+        else alert("Invalid Name and Password");
+    }
+</script>
+
+
+</body>
+</html>
